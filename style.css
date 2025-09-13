@@ -1,0 +1,346 @@
+/* General Styles */
+:root {
+    --color-primary: #224229; /* Deep Forest Green */
+    --color-secondary: #5C5C5C; /* Earthy Brown/Grey */
+    --color-accent-yellow: #D4AC0D; /* Golden Yellow */
+    --color-accent-green: #A2D9A2; /* Light Green */
+    --color-neutral-light: #F8F8F8; /* Off-White */
+    --color-neutral-dark: #E0E0E0; /* Light Grey */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-neutral-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: var(--color-text-light);
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent-yellow);
+    color: var(--color-text-light);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #C29E0C; /* Slightly darker yellow */
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('images/hero_forest.png') no-repeat center center/cover;
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px; /* Adjust as needed */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* Problem/Solution Section */
+#problem-solution {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--color-neutral-light);
+}
+
+#problem-solution p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+    background-color: var(--color-neutral-dark);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: var(--color-text-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* About Expert Section */
+#about-expert {
+    padding: 60px 20px;
+    background-color: var(--color-neutral-light);
+}
+
+.expert-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.expert-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--color-primary);
+}
+
+.expert-details {
+    text-align: center;
+}
+
+.expert-details h3 {
+    margin-bottom: 10px;
+}
+
+.expert-details ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.expert-details ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.expert-details ul li::before {
+    content: '✔';
+    color: var(--color-accent-green);
+    position: absolute;
+    left: 0;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 20px;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: var(--color-text-light);
+}
+
+.testimonial-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.testimonial-item .client-name {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: var(--color-neutral-light);
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-neutral-dark);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .expert-profile {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .expert-details {
+        text-align: left;
+    }
+
+    .expert-details ul {
+        padding-left: 0;
+    }
+
+    .expert-details ul li {
+        padding-left: 0;
+    }
+
+    .expert-details ul li::before {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expert-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
